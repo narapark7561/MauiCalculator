@@ -1,0 +1,61 @@
+﻿<!-- CPRG 211 Nara Park -->
+<!-- This is the main page of calculator app. -->
+    
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab4NaraCalculator.MainPage">
+
+    <!-- Layout for the calculator. -->
+    <VerticalStackLayout
+            Background="Black"
+            Padding="20"
+            Spacing="10"
+         VerticalOptions="FillAndExpand">
+        <Frame 
+                HorizontalOptions="FillAndExpand">
+                <Label x:Name="DisplayLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        FontSize="30"
+                        Text=""></Label>
+            </Frame>
+            <Grid HorizontalOptions="Center"
+                  Padding="1"
+                  VerticalOptions="Start"
+                  RowSpacing="10"
+                  ColumnSpacing="10"
+                  ColumnDefinitions="70,70,70,70"
+                  RowDefinitions="70,70,70,70,70"
+                  BackgroundColor="Black">
+
+
+            <!-- Buttons for the calculator are arranged in a grid here. -->
+                
+            <Button Text="AC" Grid.Row="0" Grid.Column="0" BackgroundColor="#D3D3D3" TextColor="White"  FontSize="Medium" Clicked="OnClearClick" CornerRadius="35"/>
+            <Button Text="+/-" Grid.Row="0" Grid.Column="1" BackgroundColor="#D3D3D3" TextColor="White"  FontSize="Medium" Clicked="OnCalculateClick" CornerRadius="35"/>
+            <Button Text="%" Grid.Row="0" Grid.Column="2" BackgroundColor="#D3D3D3" TextColor="White"  FontSize="Medium"  Clicked="OnCalculateClick" CornerRadius="35"/>
+            <Button Text="÷" Grid.Row="0" Grid.Column="3" BackgroundColor="#FFA500" TextColor="White"  FontSize="Medium" Clicked="OnOperatorClick"  CornerRadius="35"/>
+
+            <Button Text="7" Grid.Row="1" Grid.Column="0" BackgroundColor="#808080" TextColor="White"  FontSize="Medium" Clicked="OnNumberClick"  CornerRadius="35"/>
+                <Button Text="8" Grid.Row="1" Grid.Column="1" BackgroundColor="#808080" TextColor="White"  FontSize="Medium" Clicked="OnNumberClick" CornerRadius="35"/>
+                <Button Text="9" Grid.Row="1" Grid.Column="2" BackgroundColor="#808080" TextColor="White"  FontSize="Medium" Clicked="OnNumberClick"  CornerRadius="35"/>
+                <Button Text="×" Grid.Row="1" Grid.Column="3" BackgroundColor="#FFA500" TextColor="White"  FontSize="Medium" Clicked="OnOperatorClick"  CornerRadius="35"/>
+
+                <Button Text="4" Grid.Row="2" Grid.Column="0" BackgroundColor="#808080" TextColor="White"  FontSize="Medium" Clicked="OnNumberClick"  CornerRadius="35"/>
+                <Button Text="5" Grid.Row="2" Grid.Column="1" BackgroundColor="#808080" TextColor="White"  FontSize="Medium" Clicked="OnNumberClick"  CornerRadius="35"/>
+                <Button Text="6" Grid.Row="2" Grid.Column="2" BackgroundColor="#808080" TextColor="White"  FontSize="Medium" Clicked="OnNumberClick" CornerRadius="35"/>
+                <Button Text="-" Grid.Row="2" Grid.Column="3" BackgroundColor="#FFA500" TextColor="White"  FontSize="Medium" Clicked="OnOperatorClick"  CornerRadius="35"/>
+
+                <Button Text="1" Grid.Row="3" Grid.Column="0" BackgroundColor="#808080" TextColor="White"  FontSize="Medium" Clicked="OnNumberClick" CornerRadius="35"/>
+                <Button Text="2" Grid.Row="3" Grid.Column="1" BackgroundColor="#808080" TextColor="White" FontSize="Medium"  Clicked="OnNumberClick"  CornerRadius="35"/>
+                <Button Text="3" Grid.Row="3" Grid.Column="2" BackgroundColor="#808080" TextColor="White"  FontSize="Medium" Clicked="OnNumberClick" CornerRadius="35"/>
+                <Button Text="+" Grid.Row="3" Grid.Column="3" BackgroundColor="#FFA500" TextColor="White"  FontSize="Medium" Clicked="OnOperatorClick" CornerRadius="35"/>
+
+                <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#808080" TextColor="White"  FontSize="Medium" Clicked="OnNumberClick"  CornerRadius="35"/>
+            <Button Text="." Grid.Row="4" Grid.Column="2" BackgroundColor="#808080" TextColor="White" FontSize="Medium" WidthRequest="70" HeightRequest="70" Clicked="OnNumberClick"  CornerRadius="35"/>
+                <Button Text="=" Grid.Row="4" Grid.Column="3" BackgroundColor="#FFA500" TextColor="White" FontSize="Medium" Clicked="OnCalculateClick"  CornerRadius="35"/>
+            </Grid>
+
+        </VerticalStackLayout>
+
+</ContentPage>
